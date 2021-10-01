@@ -11,9 +11,9 @@ public class Animal {
         this.species = species;
         this.alive = true;
 
-        if (this.species == "canis") {
+        if (this.species.equals("canis")) {
             this.weight = 12.0;
-        } else if (this.species == "felis") {
+        } else if (this.species.equals("felis")) {
             this.weight = 2.5;
         } else {
             this.weight = 1.0;
@@ -27,7 +27,7 @@ public class Animal {
     }
 
     void doYouLike(String foodType) {
-        if (this.species == "felis" && foodType == "mouse") {
+        if (this.species.equals("felis") && foodType.equals("mouse")) {
             System.out.println("Yes, I do like " + foodType);
         } else {
             System.out.println("Nope.");
@@ -35,9 +35,9 @@ public class Animal {
     }
 
     Integer getHumanAge() {
-        if (this.species == "canis") {
+        if (this.species.equals("canis")) {
             return this.age * 7;
-        } else if (this.species == "felis") {
+        } else if (this.species.equals("felis")) {
             return this.age * 10;
         } else {
             return this.age;
@@ -56,10 +56,11 @@ public class Animal {
     void takeForAWalk() {
         if (this.alive) {
             this.weight -= 1;
-            System.out.println("Your pet is now skinner. It weights " + this.weight + ".");
             if (this.weight <= 0) {
                 this.alive = false;
                 System.out.println("You killed your pet >:(");
+            } else {
+                System.out.println("Your pet is now skinner. It weights " + this.weight + ".");
             }
         } else {
             System.out.println("Cannot, pet is dead.");
