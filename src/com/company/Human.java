@@ -16,12 +16,12 @@ public class Human {
 
     void setSalary(Double salary) {
         if (salary > 0) {
-            System.out.println("Data was send to acounting system.");
+            System.out.println("Data was send to accounting system.");
             System.out.println("Collect addendum at Mrs. Hania office (HR).");
             System.out.println("IRS was informed about that change too. Nothing will be hidden.");
             this.salary = salary;
         } else {
-            System.out.println("Salary = " + this.salary + ". Salary cannot be negative.");
+            System.out.println("Salary = " + salary + ". Salary cannot be negative.");
         }
     }
 
@@ -32,17 +32,17 @@ public class Human {
         return this.salary;
     }
 
-    Car getCar() {
-        return this.car;
-    }
-
-    void setCar() {
-        if (this.salary >= this.car.value) {
+    void setCar(Car car) {
+        if (this.salary >= car.value) {
             System.out.println("You bought a car.");
-        } else if (this.salary >= (this.car.value / 12)) {
+        } else if (this.salary >= (car.value / 12)) {
             System.out.println("You bought a car on credit.");
         } else {
             System.out.println("You do not have money for this car, go find better job or get a rise.");
         }
+    }
+
+    Car getCar() {
+        return this.car;
     }
 }

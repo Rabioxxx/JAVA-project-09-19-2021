@@ -38,7 +38,7 @@ public class Main {
         opel.producer = "Opel";
         opel.model = "Astra";
         opel.yearOfProduction = 1993;
-        opel.age = 2021 - opel.yearOfProduction;
+        //opel.age = 2021 - opel.yearOfProduction;
         opel.value = 500;
 
         //me.car = opel;
@@ -71,5 +71,30 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
 
+        me.setSalary(-1.0);
+        me.setSalary(0.0);
+        me.setSalary(1500.0);
+        me.getSalary();
+
+        me.setCar(opel);
+        me.getCar();
+
+        Car nissan = new Car();
+        nissan.model = "Micra";
+        nissan.producer = "Nissan";
+        nissan.yearOfProduction = 2008;
+        nissan.value = 10000;
+
+        Car ford = new Car();
+        ford.model = "Focus";
+        ford.producer = "Ford";
+        ford.yearOfProduction = 2006;
+        ford.value = 8990;
+
+        /*String model;
+        String producer;
+        Integer yearOfProduction;
+        Integer age;
+        Integer value;*/
     }
 }
