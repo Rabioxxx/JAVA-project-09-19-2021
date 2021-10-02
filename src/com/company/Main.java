@@ -41,10 +41,10 @@ public class Main {
         opel.age = 2021 - opel.yearOfProduction;
         opel.value = 500;
 
-        me.car = opel;
+        //me.car = opel;
 
-        System.out.println("I have a car " + me.car.producer + " " + me.car.model + " manufactured in " + me.car.yearOfProduction + " which is now " + me.car.age + " years old.");
-        System.out.println("I bought it for " + me.car.value + " USD.");
+        //System.out.println("I have a car " + me.car.producer + " " + me.car.model + " manufactured in " + me.car.yearOfProduction + " which is now " + me.car.age + " years old.");
+        //System.out.println("I bought it for " + me.car.value + " USD.");
 
         me.pet.feed();
         me.pet.feed();
