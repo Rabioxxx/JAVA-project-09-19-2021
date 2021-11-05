@@ -66,4 +66,8 @@ public class Animal {
             System.out.println("Cannot, pet is dead.");
         }
     }
+
+    public String toString(){
+        return species + " " + name + " " + weight + " " + age + " " + alive;
+    }
 }

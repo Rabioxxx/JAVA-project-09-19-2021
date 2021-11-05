@@ -76,9 +76,6 @@ public class Main {
         me.setSalary(1500.0);
         me.getSalary();
 
-        me.setCar(opel);
-        me.getCar();
-
         Car nissan = new Car();
         nissan.model = "Micra";
         nissan.producer = "Nissan";
@@ -91,10 +88,27 @@ public class Main {
         ford.yearOfProduction = 2006;
         ford.value = 8990;
 
+        me.setCar(nissan);
+        me.getCar();
+
         /*String model;
         String producer;
         Integer yearOfProduction;
         Integer age;
         Integer value;*/
+
+        System.out.println(nissan.equals(nissan));
+        System.out.println(nissan == nissan);
+        System.out.println(nissan.equals(ford));
+        System.out.println(nissan == ford);
+
+        System.out.println(opel.hashCode());
+        System.out.println(nissan.hashCode());
+        System.out.println(ford.hashCode()); //satan!!!!
+
+        System.out.println(dog.toString());
+        System.out.println(opel.toString());
+        System.out.println(me.toString());
+
     }
 }
