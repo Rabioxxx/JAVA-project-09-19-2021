@@ -1,6 +1,6 @@
 package com.company.devices;
 
-public class Car extends Device{
+public class Car extends Device {
     Integer age = 2021 - yearOfProduction;
     Integer value;
 
@@ -41,7 +41,7 @@ public class Car extends Device{
         this.value = value;
     }
 
-    public String toString(){
+    public String toString() {
         return model + " " + producer + " " + yearOfProduction + " " + age + " " + value;
     }
 }
