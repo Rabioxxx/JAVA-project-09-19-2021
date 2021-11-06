@@ -1,11 +1,34 @@
 package com.company.devices;
 
-public class Car extends Device {
+import com.company.Human;
+import com.company.Sellable;
+
+public class Car extends Device implements Sellable {
     Integer age;
 
     public Car(String model, String producer, Integer value, Integer yearOfProduction, Integer age) {
         super(model, producer, value, yearOfProduction);
         this.age = age;
+    }
+
+    public void sell(Human seller, Human buyer, Double price) {
+        if (!seller.getCar().equals(this)){
+            System.out.println("Seller doesn't have that car.");
+        }else if(buyer.getCash() < price){
+            System.out.println("Buyer has no cash for transaction.");
+        }else{
+            Double buyersCash = buyer.getCash();
+            buyersCash -= price;
+            buyer.setCash(buyersCash);
+
+            Double sellersCash = seller.getCash();
+            sellersCash += price;
+            seller.setCash(sellersCash);
+
+            buyer.setCar(this);
+
+            seller.setCar(null);
+        }
     }
 
     public void turnOn(){
@@ -47,6 +70,16 @@ public class Car extends Device {
 
     public void setValue(Integer value) {
         this.value = value;
+    }
+
+    public Boolean equals(Car car){
+        if (this == car) {
+            return true;
+        } else if(this.producer == car.producer && this.model == car.model && this.yearOfProduction == car.yearOfProduction && this.age == car.age && this.value == car.value){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public String toString() {

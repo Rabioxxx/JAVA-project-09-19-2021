@@ -28,9 +28,7 @@ public class Main {
         Integer humanAge = dog.getHumanAge();
         System.out.println("If I'd be human, I'd be " + humanAge + " years old.");
 
-        Human me = new Human();
-        me.firstName = "Szymon";
-        me.lastName = "Jasiński";
+        Human me = new Human("Szymon", "Jasiński", 1300.0);
         me.pet = dog;
 
         System.out.println("I have a " + me.pet.species);
@@ -114,5 +112,9 @@ public class Main {
         System.out.println(me.toString());
 
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
+
+        Human Jan = new Human("Jan", "Kowalski", 2500.0);
+
+
     }
 }

@@ -9,12 +9,15 @@ public class Human extends Animal{
     String lastName;
     Integer age;
     private Double salary;
+    private Double cash;
     Animal pet;
     private Car car;
 
-    Human() {
+    Human(String firstName, String lastName, Double salary) {
         super("homo sapiens");
-        this.salary = 1300.0;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
     }
 
     void setSalary(Double salary) {
@@ -35,7 +38,7 @@ public class Human extends Animal{
         return this.salary;
     }
 
-    void setCar(Car car) {
+    public void setCar(Car car) {
         if (this.salary >= car.getValue()) {
             System.out.println("You bought a car.");
         } else if (this.salary >= (car.getValue() / 12)) {
@@ -45,8 +48,16 @@ public class Human extends Animal{
         }
     }
 
-    Car getCar() {
+    public Car getCar() {
         return this.car;
+    }
+
+    public void setCash(Double cash){
+        this.cash = cash;
+    }
+
+    public Double getCash(){
+        return cash;
     }
 
     public String toString(){
