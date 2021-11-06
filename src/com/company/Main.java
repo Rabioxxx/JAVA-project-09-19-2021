@@ -1,5 +1,7 @@
 package com.company;
 
+import devices.Car;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -35,11 +37,11 @@ public class Main {
 
         Car opel = new Car();
 
-        opel.producer = "Opel";
-        opel.model = "Astra";
-        opel.yearOfProduction = 1993;
+        opel.setProducer("Opel");
+        opel.setModel("Astra");
+        opel.setYearOfProduction(1993);
         //opel.age = 2021 - opel.yearOfProduction;
-        opel.value = 500;
+        opel.setValue(500);
 
         //me.car = opel;
 
@@ -77,16 +79,16 @@ public class Main {
         me.getSalary();
 
         Car nissan = new Car();
-        nissan.model = "Micra";
-        nissan.producer = "Nissan";
-        nissan.yearOfProduction = 2008;
-        nissan.value = 10000;
+        nissan.setModel("Micra");
+        nissan.setProducer("Nissan");
+        nissan.setYearOfProduction(2008);
+        nissan.setValue(10000);
 
         Car ford = new Car();
-        ford.model = "Focus";
-        ford.producer = "Ford";
-        ford.yearOfProduction = 2006;
-        ford.value = 8990;
+        ford.setModel("Focus");
+        ford.setProducer("Ford");
+        ford.setYearOfProduction(2006);
+        ford.setValue(8990);
 
         me.setCar(nissan);
         me.getCar();
