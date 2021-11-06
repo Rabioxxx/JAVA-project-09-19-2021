@@ -9,4 +9,8 @@ public class Phone extends Device {
         this.screenSize = screenSize;
         this.os = os;
     }
+
+    public void turnOn(){
+        System.out.println("Włączam telefon.");
+    }
 }

@@ -113,6 +113,6 @@ public class Main {
         System.out.println(opel.toString());
         System.out.println(me.toString());
 
-        Device washingMachine = new Device("GG606", "Bosh", 1200, 2020);
+        //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
     }
 }

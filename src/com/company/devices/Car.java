@@ -8,6 +8,10 @@ public class Car extends Device {
         this.age = age;
     }
 
+    public void turnOn(){
+        System.out.println("Przekręcam kluczyk.");
+    }
+
     public String getModel() {
         return model;
     }
