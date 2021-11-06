@@ -1,9 +1,6 @@
-package devices;
+package com.company.devices;
 
-public class Car {
-    String model;
-    String producer;
-    Integer yearOfProduction = 0;
+public class Car extends Device{
     Integer age = 2021 - yearOfProduction;
     Integer value;
 

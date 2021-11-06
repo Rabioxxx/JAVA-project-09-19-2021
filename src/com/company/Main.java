@@ -1,6 +1,6 @@
 package com.company;
 
-import devices.Car;
+import com.company.devices.Car;
 
 public class Main {
 

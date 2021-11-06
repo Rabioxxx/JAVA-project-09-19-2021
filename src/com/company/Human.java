@@ -1,10 +1,10 @@
 package com.company;
 
-import devices.Car;
+import com.company.devices.Car;
 
 import java.util.Date;
 
-public class Human {
+public class Human extends Animal{
     String firstName;
     String lastName;
     Integer age;
@@ -13,6 +13,7 @@ public class Human {
     private Car car;
 
     Human() {
+        super("homo sapiens");
         this.salary = 1300.0;
     }
 
