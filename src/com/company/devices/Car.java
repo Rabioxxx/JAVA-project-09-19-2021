@@ -3,8 +3,8 @@ package com.company.devices;
 public class Car extends Device {
     Integer age;
 
-    public Car(String model, String producer, Integer yearOfProduction, Integer age) {
-        super(model, producer, yearOfProduction);
+    public Car(String model, String producer, Integer value, Integer yearOfProduction, Integer age) {
+        super(model, producer, value, yearOfProduction);
         this.age = age;
     }
 
