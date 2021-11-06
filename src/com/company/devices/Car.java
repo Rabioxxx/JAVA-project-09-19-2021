@@ -1,8 +1,12 @@
 package com.company.devices;
 
 public class Car extends Device {
-    Integer age = 2021 - yearOfProduction;
-    Integer value;
+    Integer age;
+
+    public Car(String model, String producer, Integer yearOfProduction, Integer age) {
+        super(model, producer, yearOfProduction);
+        this.age = age;
+    }
 
     public String getModel() {
         return model;
@@ -24,18 +28,18 @@ public class Car extends Device {
         return value;
     }
 
-    public void setModel(String model) {
+    /*public void setModel(String model) {
         this.model = model;
-    }
+    }*/
 
-    public void setProducer(String producer) {
+    /*public void setProducer(String producer) {
         this.producer = producer;
-    }
+    }*/
 
-    public void setYearOfProduction(Integer yearOfProduction) {
+    /*public void setYearOfProduction(Integer yearOfProduction) {
         this.yearOfProduction = yearOfProduction;
         this.age = 2021 - yearOfProduction;
-    }
+    }*/
 
     public void setValue(Integer value) {
         this.value = value;

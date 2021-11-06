@@ -35,11 +35,11 @@ public class Main {
         System.out.println("I have a " + me.pet.species);
         System.out.println("I named it " + me.pet.name);
 
-        Car opel = new Car();
+        Car opel = new Car("Astra", "Opel", 1993, 2021-1993);
 
-        opel.setProducer("Opel");
-        opel.setModel("Astra");
-        opel.setYearOfProduction(1993);
+        //opel.setProducer("Opel");
+        //opel.setModel("Astra");
+        //opel.setYearOfProduction(1993);
         //opel.age = 2021 - opel.yearOfProduction;
         opel.setValue(500);
 
@@ -78,20 +78,20 @@ public class Main {
         me.setSalary(1500.0);
         me.getSalary();
 
-        Car nissan = new Car();
-        nissan.setModel("Micra");
+        Car nissan = new Car("Micra", "Nissan", 2008, 2021-2008);
+        /*nissan.setModel("Micra");
         nissan.setProducer("Nissan");
         nissan.setYearOfProduction(2008);
-        nissan.setValue(10000);
+        nissan.setValue(10000);*/
 
-        Car ford = new Car();
-        ford.setModel("Focus");
+        Car ford = new Car("Focus", "Ford", 2006, 2021-2006);
+        /*ford.setModel("Focus");
         ford.setProducer("Ford");
         ford.setYearOfProduction(2006);
-        ford.setValue(8990);
+        ford.setValue(8990);*/
 
-        me.setCar(nissan);
-        me.getCar();
+        //me.setCar(nissan);
+        //me.getCar();
 
         /*String model;
         String producer;
