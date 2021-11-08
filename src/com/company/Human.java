@@ -4,7 +4,7 @@ import com.company.devices.Car;
 
 import java.util.Date;
 
-public class Human extends Animal{
+public class Human extends Animal {
     String firstName;
     String lastName;
     Integer age;
@@ -41,15 +41,16 @@ public class Human extends Animal{
 
     public void setCar(Car car) {
         Double carValue = car.getValue();
+        Double mortgagePayment = carValue / 12.0;
         if (cash >= carValue) {
             cash -= carValue;
             this.car = car;
             System.out.println("You bought a car for cash.");
-        } else if (salary >= (carValue / 12.0)) {
-            liabilities = carValue - cash;
-            cash = 0.0;
+        } else if (salary >= mortgagePayment) {
+            liabilities = carValue - mortgagePayment;
+            cash -= mortgagePayment;
             this.car = car;
-            System.out.println("You bought a car on credit.");
+            System.out.println("You bought a car on credit and paid.");
         } else {
             System.out.println("You do not have money for this car, go find better job or get a rise to qualify for credit.");
         }
@@ -59,15 +60,15 @@ public class Human extends Animal{
         return this.car;
     }
 
-    public void setCash(Double cash){
+    public void setCash(Double cash) {
         this.cash = cash;
     }
 
-    public Double getCash(){
+    public Double getCash() {
         return cash;
     }
 
-    public String toString(){
+    public String toString() {
         return firstName + " " + lastName + " " + age + " " + salary + " " + pet + " " + car;
     }
 }
