@@ -43,6 +43,7 @@ public class Human extends Animal{
             this.car = car;
             System.out.println("You bought a car.");
         } else if (this.salary >= (car.getValue() / 12.0)) {
+            this.car = car;
             System.out.println("You bought a car on credit.");
         } else {
             System.out.println("You do not have money for this car, go find better job or get a rise.");
