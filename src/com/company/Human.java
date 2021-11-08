@@ -12,6 +12,7 @@ public class Human extends Animal{
     private Double cash;
     Animal pet;
     private Car car;
+    private Double liabilities;
 
     Human(String firstName, String lastName, Double salary) {
         super("homo sapiens");
@@ -39,14 +40,18 @@ public class Human extends Animal{
     }
 
     public void setCar(Car car) {
-        if (this.salary >= car.getValue()) {
+        Double carValue = car.getValue();
+        if (cash >= carValue) {
+            cash -= carValue;
             this.car = car;
-            System.out.println("You bought a car.");
-        } else if (this.salary >= (car.getValue() / 12.0)) {
+            System.out.println("You bought a car for cash.");
+        } else if (salary >= (carValue / 12.0)) {
+            liabilities = carValue - cash;
+            cash = 0.0;
             this.car = car;
             System.out.println("You bought a car on credit.");
         } else {
-            System.out.println("You do not have money for this car, go find better job or get a rise.");
+            System.out.println("You do not have money for this car, go find better job or get a rise to qualify for credit.");
         }
     }
 
