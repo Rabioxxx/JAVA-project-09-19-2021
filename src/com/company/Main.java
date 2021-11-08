@@ -34,13 +34,13 @@ public class Main {
         System.out.println("I have a " + me.pet.species);
         System.out.println("I named it " + me.pet.name);
 
-        Car opel = new Car("Astra", "Opel", 500, 1993, 2021-1993);
+        Car opel = new Car("Astra", "Opel", 500.0, 1993, 2021-1993);
 
         //opel.setProducer("Opel");
         //opel.setModel("Astra");
         //opel.setYearOfProduction(1993);
         //opel.age = 2021 - opel.yearOfProduction;
-        opel.setValue(500);
+        opel.setValue(500.0);
 
         //me.car = opel;
 
@@ -77,13 +77,13 @@ public class Main {
         me.setSalary(1500.0);
         me.getSalary();
 
-        Car nissan = new Car("Micra", "Nissan", 10000, 2008, 2021-2008);
+        Car nissan = new Car("Micra", "Nissan", 10000.0, 2008, 2021-2008);
         /*nissan.setModel("Micra");
         nissan.setProducer("Nissan");
         nissan.setYearOfProduction(2008);
         nissan.setValue(10000);*/
 
-        Car ford = new Car("Focus", "Ford", 8990, 2006, 2021-2006);
+        Car ford = new Car("Focus", "Ford", 8990.0, 2006, 2021-2006);
         /*ford.setModel("Focus");
         ford.setProducer("Ford");
         ford.setYearOfProduction(2006);

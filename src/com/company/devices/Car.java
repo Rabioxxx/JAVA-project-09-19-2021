@@ -6,7 +6,7 @@ import com.company.Sellable;
 public class Car extends Device implements Sellable {
     Integer age;
 
-    public Car(String model, String producer, Integer value, Integer yearOfProduction, Integer age) {
+    public Car(String model, String producer, Double value, Integer yearOfProduction, Integer age) {
         super(model, producer, value, yearOfProduction);
         this.age = age;
     }
@@ -53,7 +53,7 @@ public class Car extends Device implements Sellable {
         return age;
     }
 
-    public Integer getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -70,18 +70,14 @@ public class Car extends Device implements Sellable {
         this.age = 2021 - yearOfProduction;
     }*/
 
-    public void setValue(Integer value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
     public Boolean equals(Car car) {
         if (this == car) {
             return true;
-        } else if (this.producer == car.producer && this.model == car.model && this.yearOfProduction == car.yearOfProduction && this.age == car.age && this.value == car.value) {
-            return true;
-        } else {
-            return false;
-        }
+        } else return this.producer == car.producer && this.model == car.model && this.yearOfProduction == car.yearOfProduction && this.age == car.age && this.value == car.value;
     }
 
     public String toString() {

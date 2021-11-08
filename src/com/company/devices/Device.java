@@ -4,9 +4,9 @@ public abstract class Device {
     final String model;
     final String producer;
     final Integer yearOfProduction;
-    Integer value;
+    Double value;
 
-    public Device(String model, String producer, Integer value, Integer yearOfProduction) {
+    public Device(String model, String producer, Double value, Integer yearOfProduction) {
         this.model = model;
         this.producer = producer;
         this.yearOfProduction = yearOfProduction;
