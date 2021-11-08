@@ -19,7 +19,7 @@ public class Animal {
             this.weight = 1.0;
         }
 
-        System.out.println("utworzono nowe zwierze");
+        System.out.println("Created new animal.");
     }
 
     void IntroduceYourself() {

@@ -14,4 +14,8 @@ public abstract class Device {
     }
 
     public abstract void turnOn();
+
+    public String toString(){
+        return model + " " + producer + " " + yearOfProduction + " " + value;
+    }
 }

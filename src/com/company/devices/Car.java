@@ -83,6 +83,6 @@ public class Car extends Device implements Sellable {
     }
 
     public String toString() {
-        return model + " " + producer + " " + yearOfProduction + " " + age + " " + value;
+        return model + " " + producer + " " + yearOfProduction + " " + value + " " + age;
     }
 }
