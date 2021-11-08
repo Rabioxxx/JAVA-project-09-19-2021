@@ -107,13 +107,16 @@ public class Main {
         System.out.println(nissan.hashCode());
         System.out.println(ford.hashCode()); //satan!!!!
 
-        System.out.println(dog.toString());
-        System.out.println(opel.toString());
-        System.out.println(me.toString());
+        System.out.println(dog);
+        System.out.println(opel);
+        System.out.println(me);
 
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
 
         Human jan = new Human("Jan", "Kowalski", 2500.0);
+
+        me.setCar(nissan);
+
         System.out.println(me.getCar());
         nissan.sell(me, jan, 600.0);
     }
