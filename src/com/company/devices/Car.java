@@ -12,11 +12,13 @@ public class Car extends Device implements Sellable {
     }
 
     public void sell(Human seller, Human buyer, Double price) {
-        if (!seller.getCar().equals(this)){
+        if (seller.getCar() == null) {
+            System.out.println("Buyer don't have any car.");
+        } else if (!seller.getCar().equals(this)) {
             System.out.println("Seller doesn't have that car.");
-        }else if(buyer.getCash() < price){
+        } else if (buyer.getCash() < price) {
             System.out.println("Buyer has no cash for transaction.");
-        }else{
+        } else {
             Double buyersCash = buyer.getCash();
             buyersCash -= price;
             buyer.setCash(buyersCash);
@@ -31,7 +33,7 @@ public class Car extends Device implements Sellable {
         }
     }
 
-    public void turnOn(){
+    public void turnOn() {
         System.out.println("Przekręcam kluczyk.");
     }
 
@@ -72,12 +74,12 @@ public class Car extends Device implements Sellable {
         this.value = value;
     }
 
-    public Boolean equals(Car car){
+    public Boolean equals(Car car) {
         if (this == car) {
             return true;
-        } else if(this.producer == car.producer && this.model == car.model && this.yearOfProduction == car.yearOfProduction && this.age == car.age && this.value == car.value){
+        } else if (this.producer == car.producer && this.model == car.model && this.yearOfProduction == car.yearOfProduction && this.age == car.age && this.value == car.value) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }

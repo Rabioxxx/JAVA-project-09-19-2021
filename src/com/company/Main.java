@@ -113,8 +113,8 @@ public class Main {
 
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
 
-        Human Jan = new Human("Jan", "Kowalski", 2500.0);
-
-
+        Human jan = new Human("Jan", "Kowalski", 2500.0);
+        System.out.println(me.getCar());
+        nissan.sell(me, jan, 600.0);
     }
 }
