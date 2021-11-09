@@ -1,12 +1,11 @@
 package com.company;
 
 import com.company.devices.Car;
-import com.company.devices.Device;
 
 public class Main {
 
     public static void main(String[] args) {
-        Integer x = 3;
+        //Integer x = 3;
         Animal dog = new Animal("canis", 6.5, 5);
         Animal cat = new Animal("felis", 3.0, 8);
 
@@ -98,6 +97,7 @@ public class Main {
         Integer age;
         Integer value;*/
 
+        /*
         System.out.println("Comparing Objects from zadanie 6., .equals(), .hashcode().");
 
         System.out.println(nissan.equals(nissan));
@@ -112,6 +112,7 @@ public class Main {
         System.out.println(dog);
         System.out.println(opel);
         System.out.println(me);
+        */
 
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
 
