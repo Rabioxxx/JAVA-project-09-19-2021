@@ -7,18 +7,22 @@ import java.util.Date;
 public class Human extends Animal {
     String firstName;
     String lastName;
-    Integer age;
     private Double salary;
     private Double cash;
     Animal pet;
     private Car car;
     private Double liabilities;
 
-    Human(String firstName, String lastName, Double salary) {
-        super("homo sapiens");
+    Human(String firstName, String lastName, Double salary, Double cash, Double liabilities) {
+
+        // TODO:Add weight and age as variables. Could randomise it.
+        // Right now these values are constant and same for every created Human.
+        super("Homo Sapiens", 60.0, 20);
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
+        this.cash = cash;
+        this.liabilities = liabilities;
     }
 
     void setSalary(Double salary) {
@@ -37,6 +41,10 @@ public class Human extends Animal {
         System.out.println(dateAndTime);
         System.out.println("Your salary = " + this.salary);
         return this.salary;
+    }
+
+    public void setCar(){
+        this.car = null;
     }
 
     public void setCar(Car car) {
