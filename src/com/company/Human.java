@@ -25,6 +25,10 @@ public class Human extends Animal {
         this.liabilities = liabilities;
     }
 
+    public void setPet(Animal pet){
+        this.pet = pet;
+    }
+
     public Animal getPet(){
         return pet;
     }
