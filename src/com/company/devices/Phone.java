@@ -16,12 +16,16 @@ public class Phone extends Device {
     }
 
     public void installAnApp(String appName) {
+        System.out.println("Application " + appName + " has been installed.");
     }
 
     public void installAnApp(String appName, String version) {
     }
 
     public void installAnApp(String appName, String version, String server) {
+    }
+
+    public void installAnApp(String[] appList) {
     }
 
     public void sell(Human seller, Human buyer, Double price) {
