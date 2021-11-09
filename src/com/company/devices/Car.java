@@ -12,7 +12,7 @@ public class Car extends Device {
 
     public void sell(Human seller, Human buyer, Double price) {
         if (seller.getCar() == null) {
-            System.out.println("Buyer don't have any car.");
+            System.out.println("Buyer don't have any cars.");
         } else if (!seller.getCar().equals(this)) {
             System.out.println("Seller doesn't have that car.");
         } else if (buyer.getCash() < price) {
