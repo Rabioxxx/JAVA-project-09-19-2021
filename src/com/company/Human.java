@@ -5,8 +5,8 @@ import com.company.devices.Car;
 import java.util.Date;
 
 public class Human extends Animal {
-    String firstName;
-    String lastName;
+    private final String firstName;
+    private final String lastName;
     private Double salary;
     private Double cash;
     Animal pet;
@@ -25,6 +25,10 @@ public class Human extends Animal {
         this.liabilities = liabilities;
     }
 
+    public String getName(){
+        return firstName + " " + lastName;
+    }
+
     void setSalary(Double salary) {
         if (salary > 0) {
             System.out.println("Data was send to accounting system.");
@@ -36,7 +40,7 @@ public class Human extends Animal {
         }
     }
 
-    Double getSalary() {
+    public Double getSalary() {
         Date dateAndTime = new Date();
         System.out.println(dateAndTime);
         System.out.println("Your salary = " + salary);
