@@ -141,5 +141,9 @@ public class Main {
         ArrayList<Car> carGarage;
 
         System.out.println(Math.random());
+
+        Phone phone = new Phone("Galaxy M21", "Samsung", 999.0, 2020, 6.5, "Android");
+
+        phone.installAnApp("Facebook");
     }
 }

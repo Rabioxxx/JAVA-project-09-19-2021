@@ -16,13 +16,15 @@ public class Phone extends Device {
     }
 
     public void installAnApp(String appName) {
-        System.out.println("Application " + appName + " has been installed.");
+        System.out.println("Application " + appName + " " + defaultVersionName + " has been installed correctly from " + defaultServerURL + " : " + defaultProtocol + ".");
     }
 
     public void installAnApp(String appName, String version) {
+        System.out.println("Application " + appName + " " + version + " has been installed correctly from " + defaultServerURL + " : " + defaultProtocol + ".");
     }
 
     public void installAnApp(String appName, String version, String server) {
+        System.out.println("Application " + appName + " " + version + " has been installed correctly from " + server + " : " + defaultProtocol + ".");
     }
 
     public void installAnApp(String[] appList) {
