@@ -27,7 +27,7 @@ public class Main {
         Integer humanAge = dog.getHumanAge();
         System.out.println("If I'd be human, I'd be " + humanAge + " years old.");
 
-        Human me = new Human("Szymon", "Jasiński", 1300.0, 10000.0, 0.0);
+        Human me = new Human("Szymon", "Jasiński", 64.0, 22, 1300.0, 10000.0, 0.0);
         me.pet = dog;
 
         System.out.println("I have a " + me.pet.species);
@@ -116,7 +116,9 @@ public class Main {
 
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
 
-        Human jan = new Human("Jan", "Kowalski", 2500.0, 2000.0, 10000.0);
+        // Here I am adding more Humans if I need them.
+        Human jan = new Human("Jan", "Kowalski", 110.0, 44, 2500.0, 2000.0, 10000.0);
+        Human someRandomGuy = new Human("Random", "Guy", 50.0, 33, 5000.0, 660500.0, 25000.0);
 
         me.setCar(nissan);
 
