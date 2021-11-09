@@ -3,6 +3,8 @@ package com.company;
 import com.company.creatures.*;
 import com.company.devices.*;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -39,7 +41,7 @@ public class Main {
         //System.out.println("I named it " + me.pet.name); // Doesn't work anymore. Changes are line below:
         System.out.println("And I named it " + me.pet.getName());
 
-        Car opel = new Car("Astra", "Opel", 500.0, 1993, 2021 - 1993);
+        Car opel = new Diesel("Astra", "Opel", 500.0, 1993, 2021 - 1993);
 
         //opel.setProducer("Opel");
         //opel.setModel("Astra");
@@ -82,13 +84,13 @@ public class Main {
         me.setSalary(1500.0);
         me.getSalary();
 
-        Car nissan = new Car("Micra", "Nissan", 10000.0, 2008, 2021 - 2008);
+        Car nissan = new Diesel("Micra", "Nissan", 10000.0, 2008, 2021 - 2008);
         /*nissan.setModel("Micra");
         nissan.setProducer("Nissan");
         nissan.setYearOfProduction(2008);
         nissan.setValue(10000);*/
 
-        Car ford = new Car("Focus", "Ford", 8990.0, 2006, 2021 - 2006);
+        Car ford = new Diesel("Focus", "Ford", 8990.0, 2006, 2021 - 2006);
         /*ford.setModel("Focus");
         ford.setProducer("Ford");
         ford.setYearOfProduction(2006);
@@ -135,5 +137,9 @@ public class Main {
         jan.sell(me, someRandomGuy, 600000.0);
         dog.sell(me, someRandomGuy, 4500.0);
         cat.sell(me, someRandomGuy, 150.0);
+
+        ArrayList<Car> carGarage;
+
+        System.out.println(Math.random());
     }
 }
