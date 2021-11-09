@@ -127,5 +127,7 @@ public class Main {
 
         me.setPet(cat);
         jan.sell(me, someRandomGuy, 600000.0);
+        dog.sell(me, someRandomGuy, 4500.0);
+        cat.sell(me, someRandomGuy, 150.0);
     }
 }
