@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         Integer x = 3;
-        Animal dog = new Animal("canis");
-        Animal cat = new Animal("felis");
+        Animal dog = new Animal("canis", 6.5, 5);
+        Animal cat = new Animal("felis", 3.0, 8);
 
         dog.name = "Szarik";
         dog.weight = 6.5;
@@ -28,7 +28,7 @@ public class Main {
         Integer humanAge = dog.getHumanAge();
         System.out.println("If I'd be human, I'd be " + humanAge + " years old.");
 
-        Human me = new Human("Szymon", "Jasiński", 1300.0);
+        Human me = new Human("Szymon", "Jasiński", 1300.0, 10000.0, 0.0);
         me.pet = dog;
 
         System.out.println("I have a " + me.pet.species);
@@ -113,7 +113,7 @@ public class Main {
 
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
 
-        Human jan = new Human("Jan", "Kowalski", 2500.0);
+        Human jan = new Human("Jan", "Kowalski", 2500.0, 2000.0, 10000.0);
 
         me.setCar(nissan);
 
