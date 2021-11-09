@@ -13,11 +13,11 @@ public class Human extends Animal {
     private Car car;
     private Double liabilities;
 
-    Human(String firstName, String lastName, Double salary, Double cash, Double liabilities) {
+    Human(String firstName, String lastName, Double weight, Integer age, Double salary, Double cash, Double liabilities) {
 
         // TODO:Add weight and age as variables. Could randomise it.
         // Right now these values are constant and same for every created Human.
-        super("Homo Sapiens", 60.0, 20);
+        super("Homo Sapiens", weight, age);
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
