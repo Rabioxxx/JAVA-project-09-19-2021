@@ -25,6 +25,10 @@ public class Human extends Animal {
         this.liabilities = liabilities;
     }
 
+    public Animal getPet(){
+        return pet;
+    }
+
     public String getName(){
         return firstName + " " + lastName;
     }
