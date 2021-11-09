@@ -98,6 +98,8 @@ public class Main {
         Integer age;
         Integer value;*/
 
+        System.out.println("Comparing Objects from zadanie 6., .equals(), .hashcode().");
+
         System.out.println(nissan.equals(nissan));
         System.out.println(nissan == nissan);
         System.out.println(nissan.equals(ford));
