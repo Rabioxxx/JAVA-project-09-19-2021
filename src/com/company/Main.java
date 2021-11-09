@@ -124,5 +124,8 @@ public class Main {
 
         System.out.println(me.getCar());
         nissan.sell(me, jan, 600.0);
+
+        me.setPet(cat);
+        jan.sell(me, someRandomGuy, 600000.0);
     }
 }
