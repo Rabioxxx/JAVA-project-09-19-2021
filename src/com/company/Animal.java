@@ -32,7 +32,7 @@ public class Animal implements Sellable {
 
     public void sell(Human seller, Human buyer, Double price) {
         if (this.species.equals("Homo Sapiens")) {
-            System.out.println("Sorry, you can't sell humans :/");
+            System.out.println("I'm sorry, unfortunately right now you can't sell humans :/ Please, come back later.");
         } else if (seller.getPet() == null) {
             System.out.println("Seller don't have any pets.");
         } else if (!seller.getPet().equals(this)) {
