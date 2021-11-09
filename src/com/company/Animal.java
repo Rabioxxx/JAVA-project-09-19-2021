@@ -1,6 +1,6 @@
 package com.company;
 
-public class Animal {
+public class Animal implements Sellable {
     String species;
     String name;
     Double weight;
@@ -28,6 +28,10 @@ public class Animal {
         */
 
         System.out.println("Created new animal " + this.species + ".");
+    }
+
+    public void sell(Human seller, Human buyer, Double price) {
+
     }
 
     void IntroduceYourself() {
