@@ -30,12 +30,16 @@ public class Car extends Device {
 
             seller.setCar();
 
-            System.out.println();
+            System.out.println(seller.getName() + " sold " + this.getName() + " to " + buyer.getName() + " for " + price + ".");
         }
     }
 
     public void turnOn() {
         System.out.println("Przekręcam kluczyk.");
+    }
+
+    public String getName() {
+        return producer + " " + model;
     }
 
     public String getModel() {
@@ -78,7 +82,8 @@ public class Car extends Device {
     public Boolean equals(Car car) {
         if (this == car) {
             return true;
-        } else return this.producer == car.producer && this.model == car.model && this.yearOfProduction == car.yearOfProduction && this.age == car.age && this.value == car.value;
+        } else
+            return this.producer.equals(car.producer) && this.model.equals(car.model) && this.yearOfProduction.equals(car.yearOfProduction) && this.age.equals(car.age) && this.value.equals(car.value);
     }
 
     public String toString() {
