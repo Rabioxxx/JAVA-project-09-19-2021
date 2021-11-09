@@ -81,7 +81,7 @@ public class Human extends Animal {
             liabilities = carValue - mortgagePayment;
             cash -= mortgagePayment;
             this.car = car;
-            System.out.println("You bought a " + car.getName() + " on credit and paid.");
+            System.out.println("You bought a " + car.getName() + " on credit and paid first mortgage.");
         } else {
             System.out.println("You do not have money for this car, go find better job or get a rise to qualify for credit.");
         }
