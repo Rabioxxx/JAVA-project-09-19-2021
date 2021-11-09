@@ -13,7 +13,8 @@ public class Animal {
         this.age = age;
         this.alive = true;
 
-        /* I do not need it, because the weight is required in constructor now and can be different that these values.
+        /*
+        // I do not need it, because the weight is required in constructor now and can be different that these values.
         if (this.species == "Homo Sapiens"){
             this.weight = 70.0;
         }else

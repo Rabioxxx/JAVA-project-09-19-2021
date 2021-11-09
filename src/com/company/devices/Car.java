@@ -1,9 +1,8 @@
 package com.company.devices;
 
 import com.company.Human;
-import com.company.Sellable;
 
-public class Car extends Device implements Sellable {
+public class Car extends Device {
     Integer age;
 
     public Car(String model, String producer, Double value, Integer yearOfProduction, Integer age) {
@@ -30,6 +29,8 @@ public class Car extends Device implements Sellable {
             buyer.setCar(this);
 
             seller.setCar();
+
+            System.out.println();
         }
     }
 
