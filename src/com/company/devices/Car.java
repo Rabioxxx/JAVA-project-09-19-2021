@@ -2,13 +2,15 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     Integer age;
 
     public Car(String model, String producer, Double value, Integer yearOfProduction, Integer age) {
         super(model, producer, value, yearOfProduction);
         this.age = age;
     }
+
+    abstract void refuel();
 
     public void sell(Human seller, Human buyer, Double price) {
         if (seller.getCar() == null) {
