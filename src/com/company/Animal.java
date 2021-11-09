@@ -7,10 +7,16 @@ public class Animal {
     Integer age;
     Boolean alive;
 
-    Animal(String species) {
+    Animal(String species, Double weight, Integer age) {
         this.species = species;
+        this.weight = weight;
+        this.age = age;
         this.alive = true;
 
+        /* I do not need it, because the weight is required in constructor now and can be different that these values.
+        if (this.species == "Homo Sapiens"){
+            this.weight = 70.0;
+        }else
         if (this.species.equals("canis")) {
             this.weight = 12.0;
         } else if (this.species.equals("felis")) {
@@ -18,8 +24,9 @@ public class Animal {
         } else {
             this.weight = 1.0;
         }
+        */
 
-        System.out.println("Created new animal.");
+        System.out.println("Created new animal " + this.species + ".");
     }
 
     void IntroduceYourself() {
