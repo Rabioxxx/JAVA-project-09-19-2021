@@ -16,7 +16,7 @@ public class Car extends Device {
         } else if (!seller.getCar().equals(this)) {
             System.out.println("Seller doesn't have that car.");
         } else if (buyer.getCash() < price) {
-            System.out.println("Buyer has no cash for transaction.");
+            System.out.println("Buyer has not enough cash for transaction.");
         } else {
             Double buyersCash = buyer.getCash();
             buyersCash -= price;
