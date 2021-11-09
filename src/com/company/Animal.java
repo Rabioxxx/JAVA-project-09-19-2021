@@ -31,7 +31,33 @@ public class Animal implements Sellable {
     }
 
     public void sell(Human seller, Human buyer, Double price) {
+        if (this.species.equals("Homo Sapiens")) {
+            System.out.println("Sorry, you can't sell humans :/");
+        } else if (seller.getPet() == null) {
+            System.out.println("Seller don't have any pets.");
+        } else if (!seller.getPet().equals(this)) {
+            System.out.println("Seller doesn't have that pet.");
+        } else if (buyer.getCash() < price) {
+            System.out.println("Buyer has not enough cash for transaction.");
+        } else {
+            Double buyersCash = buyer.getCash();
+            buyersCash -= price;
+            buyer.setCash(buyersCash);
 
+            Double sellersCash = seller.getCash();
+            sellersCash += price;
+            seller.setCash(sellersCash);
+
+            buyer.setPet(this);
+
+            seller.setPet();
+
+            System.out.println(seller.getName() + " sold " + this.getName() + " to " + buyer.getName() + " for " + price + ".");
+        }
+    }
+
+    public String getName() {
+        return species + " " + name;
     }
 
     void IntroduceYourself() {
@@ -79,7 +105,7 @@ public class Animal implements Sellable {
         }
     }
 
-    public String toString(){
+    public String toString() {
         return species + " " + name + " " + weight + " " + age + " " + alive;
     }
 }
