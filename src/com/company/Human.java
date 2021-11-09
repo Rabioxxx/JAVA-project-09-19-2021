@@ -39,8 +39,8 @@ public class Human extends Animal {
     Double getSalary() {
         Date dateAndTime = new Date();
         System.out.println(dateAndTime);
-        System.out.println("Your salary = " + this.salary);
-        return this.salary;
+        System.out.println("Your salary = " + salary);
+        return salary;
     }
 
     public void setCar(){
@@ -65,7 +65,7 @@ public class Human extends Animal {
     }
 
     public Car getCar() {
-        return this.car;
+        return car;
     }
 
     public void setCash(Double cash) {
