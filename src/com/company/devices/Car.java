@@ -29,7 +29,7 @@ public class Car extends Device implements Sellable {
 
             buyer.setCar(this);
 
-            seller.setCar(null);
+            seller.setCar();
         }
     }
 
