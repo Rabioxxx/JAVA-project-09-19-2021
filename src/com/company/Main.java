@@ -1,23 +1,27 @@
 package com.company;
 
-import com.company.devices.Car;
+import com.company.creatures.*;
+import com.company.devices.*;
 
 public class Main {
 
     public static void main(String[] args) {
         //Integer x = 3;
-        Animal dog = new Animal("canis", 6.5, 5);
-        Animal cat = new Animal("felis", 3.0, 8);
+        Pet dog = new Pet("Canis", "Molly", 6.5, 5);
+        Pet cat = new Pet("Felis", "Siersciuch", 3.0, 8);
 
-        dog.name = "Szarik";
-        dog.weight = 6.5;
-        dog.age = 5;
+        //dog.name = "Szarik"; // Doesn't work anymore.
+        //dog.weight = 6.5; // Doesn't work anymore.
+        //dog.age = 5; // Doesn't work anymore.
 
-        System.out.println(dog.name);
+        //System.out.println(dog.name); // Doesn't work anymore. Changes are line below:
+        System.out.println(dog.getName());
 
-        cat.name = "Siersciuch";
-        System.out.println("a kot zyje? " + cat.alive);
-        System.out.println("waga kota: " + cat.weight);
+        //cat.name = "Siersciuch"; // Doesn't work anymore.
+        //System.out.println("a kot zyje? " + cat.alive); // Doesn't work anymore. Changes are line below:
+        System.out.println("a kot zyje? " + cat.getAlive());
+        //System.out.println("waga kota: " + cat.weight); // Doesn't work anymore. Changes are line below:
+        System.out.println("waga kota: " + cat.getWeight());
         cat.IntroduceYourself();
         dog.IntroduceYourself();
 
@@ -30,10 +34,12 @@ public class Main {
         Human me = new Human("Szymon", "Jasiński", 64.0, 22, 1300.0, 10000.0, 0.0);
         me.pet = dog;
 
-        System.out.println("I have a " + me.pet.species);
-        System.out.println("I named it " + me.pet.name);
+        //System.out.println("I have a " + me.pet.species); // Doesn't work anymore. Changes are line below:
+        System.out.println("I have a " + me.pet.getSpecies());
+        //System.out.println("I named it " + me.pet.name); // Doesn't work anymore. Changes are line below:
+        System.out.println("And I named it " + me.pet.getName());
 
-        Car opel = new Car("Astra", "Opel", 500.0, 1993, 2021-1993);
+        Car opel = new Car("Astra", "Opel", 500.0, 1993, 2021 - 1993);
 
         //opel.setProducer("Opel");
         //opel.setModel("Astra");
@@ -76,13 +82,13 @@ public class Main {
         me.setSalary(1500.0);
         me.getSalary();
 
-        Car nissan = new Car("Micra", "Nissan", 10000.0, 2008, 2021-2008);
+        Car nissan = new Car("Micra", "Nissan", 10000.0, 2008, 2021 - 2008);
         /*nissan.setModel("Micra");
         nissan.setProducer("Nissan");
         nissan.setYearOfProduction(2008);
         nissan.setValue(10000);*/
 
-        Car ford = new Car("Focus", "Ford", 8990.0, 2006, 2021-2006);
+        Car ford = new Car("Focus", "Ford", 8990.0, 2006, 2021 - 2006);
         /*ford.setModel("Focus");
         ford.setProducer("Ford");
         ford.setYearOfProduction(2006);

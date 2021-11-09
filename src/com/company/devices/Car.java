@@ -1,6 +1,6 @@
 package com.company.devices;
 
-import com.company.Human;
+import com.company.creatures.Human;
 
 public class Car extends Device {
     Integer age;
@@ -30,7 +30,7 @@ public class Car extends Device {
 
             seller.setCar();
 
-            System.out.println(seller.getName() + " sold " + this.getName() + " to " + buyer.getName() + " for " + price + ".");
+            System.out.println(seller.getFullName() + " sold " + this.getName() + " to " + buyer.getFullName() + " for " + price + ".");
         }
     }
 

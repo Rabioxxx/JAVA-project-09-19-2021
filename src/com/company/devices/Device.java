@@ -17,7 +17,7 @@ public abstract class Device implements Sellable {
 
     public abstract void turnOn();
 
-    public String toString(){
+    public String toString() {
         return model + " " + producer + " " + yearOfProduction + " " + value;
     }
 }

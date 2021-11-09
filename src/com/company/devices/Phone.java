@@ -1,6 +1,6 @@
 package com.company.devices;
 
-import com.company.Human;
+import com.company.creatures.Human;
 
 public class Phone extends Device {
     Double screenSize;
@@ -12,13 +12,14 @@ public class Phone extends Device {
         this.os = os;
     }
 
-    public void sell(Human seller, Human buyer, Double price){}
+    public void sell(Human seller, Human buyer, Double price) {
+    }
 
-    public void turnOn(){
+    public void turnOn() {
         System.out.println("Włączam telefon.");
     }
 
-    public String toString(){
+    public String toString() {
         return model + " " + producer + " " + yearOfProduction + " " + value + " " + screenSize + " " + os;
     }
 }
