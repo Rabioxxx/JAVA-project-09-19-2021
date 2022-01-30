@@ -13,9 +13,7 @@ public abstract class Car extends Device {
     abstract void refuel();
 
     public void sell(Human seller, Human buyer, Double price) {
-        if (seller.getCar() == null) {
-            System.out.println("Seller don't have any cars.");
-        } else if (!seller.getCar().equals(this)) {
+        if (!seller.checkForCarInGarage(this)) {
             System.out.println("Seller doesn't have that car.");
         } else if (buyer.getCash() < price) {
             System.out.println("Buyer has not enough cash for transaction.");
@@ -28,9 +26,9 @@ public abstract class Car extends Device {
             sellersCash += price;
             seller.setCash(sellersCash);
 
-            buyer.setCar(this);
+            buyer.setGarage(this);
 
-            seller.setCar();
+            seller.setGarage();
 
             System.out.println(seller.getFullName() + " sold " + this.getName() + " to " + buyer.getFullName() + " for " + price + ".");
         }

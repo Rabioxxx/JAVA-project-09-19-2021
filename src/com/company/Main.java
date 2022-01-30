@@ -33,7 +33,7 @@ public class Main {
         Integer humanAge = dog.getHumanAge();
         System.out.println("If I'd be human, I'd be " + humanAge + " years old.");
 
-        Human me = new Human("Szymon", "Jasiński", 64.0, 22, 1300.0, 10000.0, 0.0);
+        Human me = new Human("Szymon", "Jasiński", 64.0, 22, 1300.0, 10000.0, 0.0, 3);
         me.pet = dog;
 
         //System.out.println("I have a " + me.pet.species); // Doesn't work anymore. Changes are line below:
@@ -96,8 +96,8 @@ public class Main {
         ford.setYearOfProduction(2006);
         ford.setValue(8990);*/
 
-        me.setCar(nissan);
-        me.getCar();
+        //me.setCar(nissan);
+        //me.getCar();
 
         /*String model;
         String producer;
@@ -125,12 +125,12 @@ public class Main {
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
 
         // Here I am adding more Humans if I need them.
-        Human jan = new Human("Jan", "Kowalski", 110.0, 44, 2500.0, 2000.0, 10000.0);
-        Human someRandomGuy = new Human("Random", "Guy", 50.0, 33, 5000.0, 660500.0, 25000.0);
+        Human jan = new Human("Jan", "Kowalski", 110.0, 44, 2500.0, 2000.0, 10000.0, 4);
+        Human someRandomGuy = new Human("Random", "Guy", 50.0, 33, 5000.0, 660500.0, 25000.0, 5);
 
-        me.setCar(nissan);
+        //me.setCar(nissan);
 
-        System.out.println(me.getCar());
+        //System.out.println(me.getCar());
         nissan.sell(me, jan, 600.0);
 
         me.setPet(cat);
