@@ -1,21 +1,24 @@
 package com.company.creatures;
 
 public class Pet extends Animal {
+    private static final Double DEFAULT_FOOD_WEIGHT = 1.0;
+
     public Pet(String species, String name, Double weight, Integer age) {
         super(species, weight, age);
         this.name = name;
     }
 
     public void feed() {
+        this.feed(DEFAULT_FOOD_WEIGHT);
+    }
+
+    public void feed(Double foodWeight) {
         if (this.alive) {
-            this.weight += 1.0;
+            this.weight += foodWeight;
             System.out.println("Your pet is now fatter. It weights " + this.weight + ".");
         } else {
             System.out.println("Your pet is dead.");
         }
-    }
-
-    public void feed(Double foodWeight) {
     }
 
     public void sell(Human seller, Human buyer, Double price) {

@@ -2,11 +2,15 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
 public class Phone extends Device {
     Double screenSize;
     String os;
-    static final String defaultServerURL = "https://www.downloadalltheappshere.com";
-    static final String defaultProtocol = "Protocol0000";
+    static final String defaultServerURL = "downloadalltheappshere.com";
+    static final Integer defaultProtocol = 443;
     static final String defaultVersionName = "v1.0";
 
     public Phone(String model, String producer, Double value, Integer yearOfProduction, Double screenSize, String os) {
@@ -16,18 +20,31 @@ public class Phone extends Device {
     }
 
     public void installAnApp(String appName) {
-        System.out.println("Application " + appName + " " + defaultVersionName + " has been installed correctly from " + defaultServerURL + " : " + defaultProtocol + ".");
+        installAnApp(appName, defaultVersionName);
     }
 
     public void installAnApp(String appName, String version) {
-        System.out.println("Application " + appName + " " + version + " has been installed correctly from " + defaultServerURL + " : " + defaultProtocol + ".");
+        installAnApp(appName, version, defaultServerURL);
     }
 
     public void installAnApp(String appName, String version, String server) {
-        System.out.println("Application " + appName + " " + version + " has been installed correctly from " + server + " : " + defaultProtocol + ".");
+
+        try {
+            URL url = new URL("https", server, defaultProtocol, appName + "-" + version);
+            this.installAnApp(url);
+        } catch (MalformedURLException e){
+            e.printStackTrace();
+        }
     }
 
-    public void installAnApp(String[] appList) {
+    public void installAnApp(List<String> appList) {
+        for (String appName : appList) {
+            this.installAnApp(appName);
+        }
+    }
+
+    public void installAnApp(URL url) {
+        System.out.println("Installed correctly from " + url + ".");
     }
 
     public void sell(Human seller, Human buyer, Double price) {
