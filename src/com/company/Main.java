@@ -3,8 +3,6 @@ package com.company;
 import com.company.creatures.*;
 import com.company.devices.*;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -139,7 +137,7 @@ public class Main {
         dog.sell(me, someRandomGuy, 4500.0);
         cat.sell(me, someRandomGuy, 150.0);
 
-        Phone phone = new Phone("Galaxy M21", "Samsung", 999.0, 2020, 6.5, "Android");
+        Phone phone = new Phone(me, "Galaxy M21", "Samsung", 999.0, 2020, 6.5, "Android");
 
         me.addCarToGarage(ford);
         me.addCarToGarage(nissan);
@@ -176,5 +174,29 @@ public class Main {
         System.out.println(nissan.checkIfASoldToB(me, jan));
         System.out.println(nissan.checkIfASoldToB(me, someRandomGuy));
         System.out.println(nissan.soldCount());
+
+        Application facebookApp = new Application("Facebook");
+        Application instagramApp = new Application("Instagram");
+        Application scamApp = new Application("Not scam 100% free", "v6.9", 6.99);
+        Application mieczeISandaly = new Application("Miecze I Sandały", 31.99);
+        Application mostExpensiveGame = new Application("The Most Expensive Game", 999.99);
+        Application pacman = new Application("Pac-Man", "v0.99");
+        Application wsbApp = new Application("WSB App", "v1.1.5442");
+
+        phone.installApp(wsbApp);
+        phone.installApp(mieczeISandaly);
+        phone.installApp(instagramApp);
+        phone.installApp(pacman);
+        phone.installApp(mostExpensiveGame);
+        phone.installApp(scamApp);
+        phone.installApp(facebookApp);
+
+        System.out.println(phone.isInstalled(facebookApp));
+        System.out.println(phone.isInstalled(scamApp));
+        System.out.println(phone.getAllFreeApps());
+        System.out.println(phone.getAllAppPrice());
+
+        System.out.println(phone.getAllAppsAlphabetically());
+        System.out.println(phone.getAllAppsByPrice());
     }
 }

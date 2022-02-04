@@ -5,8 +5,8 @@ import com.company.creatures.Human;
 import java.awt.List;
 
 public abstract class Car extends Device {
-    Integer age;
-    List ownershipList;
+    private final Integer age;
+    private final List ownershipList;
 
     public Car(String model, String producer, Double value, Integer yearOfProduction, Integer age, Human firstOwner) {
         super(model, producer, value, yearOfProduction);
