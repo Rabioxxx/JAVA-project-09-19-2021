@@ -139,6 +139,8 @@ public class Main {
         dog.sell(me, someRandomGuy, 4500.0);
         cat.sell(me, someRandomGuy, 150.0);
 
+        Phone phone = new Phone("Galaxy M21", "Samsung", 999.0, 2020, 6.5, "Android");
+
         me.addCarToGarage(ford);
         me.addCarToGarage(nissan);
         me.addCarToGarage(opel);
