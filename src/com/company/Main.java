@@ -41,7 +41,7 @@ public class Main {
         //System.out.println("I named it " + me.pet.name); // Doesn't work anymore. Changes are line below:
         System.out.println("And I named it " + me.pet.getName());
 
-        Car opel = new Diesel("Astra", "Opel", 500.0, 1993, 2021 - 1993);
+        Car opel = new Diesel("Astra", "Opel", 500.0, 1993, 2021 - 1993, me);
 
         //opel.setProducer("Opel");
         //opel.setModel("Astra");
@@ -84,13 +84,13 @@ public class Main {
         me.setSalary(1500.0);
         me.getSalary();
 
-        Car nissan = new Diesel("Micra", "Nissan", 10000.0, 2008, 2021 - 2008);
+        Car nissan = new Diesel("Micra", "Nissan", 10000.0, 2008, 2021 - 2008, me);
         /*nissan.setModel("Micra");
         nissan.setProducer("Nissan");
         nissan.setYearOfProduction(2008);
         nissan.setValue(10000);*/
 
-        Car ford = new Diesel("Focus", "Ford", 8990.0, 2006, 2021 - 2006);
+        Car ford = new Diesel("Focus", "Ford", 8990.0, 2006, 2021 - 2006, me);
         /*ford.setModel("Focus");
         ford.setProducer("Ford");
         ford.setYearOfProduction(2006);
@@ -172,5 +172,23 @@ public class Main {
         }
 
         //nissan.sell(jan, me, 500.0); //checking "throw" for empty space in garage.
+
+        nissan.sell(me, someRandomGuy, 600.0);
+        nissan.sell(someRandomGuy, me, 600.0);
+        nissan.sell(me, jan, 600.0);
+        nissan.sell(jan, me, 600.0);
+        nissan.sell(me, jan, 600.0);
+        nissan.sell(jan, me, 600.0);
+        nissan.sell(me, jan, 600.0);
+        nissan.sell(jan, me, 600.0);
+        nissan.sell(me, jan, 600.0);
+        nissan.sell(jan, me, 600.0);
+
+        System.out.println(nissan.checkPastOwnership(jan));
+        System.out.println(nissan.checkIfASoldToB(someRandomGuy, jan));
+        System.out.println(nissan.checkIfASoldToB(someRandomGuy, me));
+        System.out.println(nissan.checkIfASoldToB(me, jan));
+        System.out.println(nissan.checkIfASoldToB(me, someRandomGuy));
+        System.out.println(nissan.soldCount());
     }
 }

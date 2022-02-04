@@ -2,12 +2,17 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
+import java.awt.List;
+
 public abstract class Car extends Device {
     Integer age;
+    List ownershipList;
 
-    public Car(String model, String producer, Double value, Integer yearOfProduction, Integer age) {
+    public Car(String model, String producer, Double value, Integer yearOfProduction, Integer age, Human firstOwner) {
         super(model, producer, value, yearOfProduction);
         this.age = age;
+        this.ownershipList = new List();
+        this.ownershipList.add(firstOwner.getFullName());
     }
 
     abstract void refuel();
@@ -16,7 +21,9 @@ public abstract class Car extends Device {
         if (!seller.checkForCarInGarage(this)) {
             //System.out.println("Seller doesn't have that car.");
             throw new Exception("Seller doesn't have that car!");
-        } else if (!buyer.checkForFreeSpaceInGarage()){
+        } else if (this.checkOwnership(seller)) {
+            throw new Exception("Seller isn't owner of that car!");
+        } else if (!buyer.checkForFreeSpaceInGarage()) {
             throw new Exception("Buyer doesn't have empty space in garage!");
         } else if (buyer.getCash() < price) {
             //System.out.println("Buyer has not enough cash for transaction.");
@@ -34,9 +41,44 @@ public abstract class Car extends Device {
 
             buyer.addCarToGarage(this);
 
+            this.ownershipList.add(buyer.getFullName());
 
             System.out.println(seller.getFullName() + " sold " + this.getName() + " to " + buyer.getFullName() + " for " + price + ".");
         }
+    }
+
+    public boolean checkPastOwnership(Human human){
+        int x = this.ownershipList.getItemCount();
+        String humanName = human.getFullName();
+        for (int i = 0; i < x - 1; i++) {
+            if (this.ownershipList.getItem(i).equals(humanName)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean checkOwnership(Human human) {
+        int x = this.ownershipList.getItemCount();
+        return this.ownershipList.getItem(x - 1) == (human.getFullName());
+    }
+
+    public boolean checkIfASoldToB(Human a, Human b){
+        int x = this.ownershipList.getItemCount();
+        if (x != 1) {
+            String aName = a.getFullName();
+            String bName = b.getFullName();
+            for (int i = 1; i < x - 1; i++) {
+                if (this.ownershipList.getItem(i - 1).equals(aName) && this.ownershipList.getItem(i).equals(bName)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public Integer soldCount(){
+        return this.ownershipList.getItemCount();
     }
 
     public void turnOn() {
