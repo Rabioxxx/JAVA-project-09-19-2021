@@ -139,22 +139,6 @@ public class Main {
         dog.sell(me, someRandomGuy, 4500.0);
         cat.sell(me, someRandomGuy, 150.0);
 
-        ArrayList<String> appList = new ArrayList<String>();
-
-        System.out.println(Math.random());
-
-        appList.add("Facebook");
-        appList.add("Instagram");
-        appList.add("Bank MesaV");
-        appList.add("Google Chrome");
-        appList.add("Authenticator");
-        appList.add("Crysis 3");
-        appList.add("Calculator");
-
-        Phone phone = new Phone("Galaxy M21", "Samsung", 999.0, 2020, 6.5, "Android");
-
-        phone.installAnApp("Facebook");
-
         me.addCarToGarage(ford);
         me.addCarToGarage(nissan);
         me.addCarToGarage(opel);
