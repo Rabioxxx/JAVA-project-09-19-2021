@@ -4,5 +4,5 @@ import com.company.creatures.Human;
 
 public interface Sellable {
     // everything here is public and abstract.
-    void sell(Human seller, Human buyer, Double price);
+    void sell(Human seller, Human buyer, Double price) throws Exception;
 }

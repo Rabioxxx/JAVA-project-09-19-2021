@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //Integer x = 3;
         Pet dog = new Pet("Canis", "Molly", 6.5, 5);
         Pet cat = new Pet("Felis", "Siersciuch", 3.0, 8);
@@ -33,7 +33,7 @@ public class Main {
         Integer humanAge = dog.getHumanAge();
         System.out.println("If I'd be human, I'd be " + humanAge + " years old.");
 
-        Human me = new Human("Szymon", "Jasiński", 64.0, 22, 1300.0, 10000.0, 0.0, 3);
+        Human me = new Human("Szymon", "Jasiński", 64.0, 22, 1300.0, 10000.0, 0.0);
         me.pet = dog;
 
         //System.out.println("I have a " + me.pet.species); // Doesn't work anymore. Changes are line below:
@@ -125,13 +125,14 @@ public class Main {
         //Device washingMachine = new Device("GG606", "Bosh", 1200, 2020); //class is abstract.
 
         // Here I am adding more Humans if I need them.
-        Human jan = new Human("Jan", "Kowalski", 110.0, 44, 2500.0, 2000.0, 10000.0, 4);
-        Human someRandomGuy = new Human("Random", "Guy", 50.0, 33, 5000.0, 660500.0, 25000.0, 5);
+        Human jan = new Human("Jan", "Kowalski", 110.0, 44, 2500.0, 2000.0, 10000.0);
+        Human someRandomGuy = new Human("Random", "Guy", 50.0, 33, 5000.0, 660500.0, 25000.0);
 
-        //me.setCar(nissan);
+        me.addCarToGarage(nissan);
 
         //System.out.println(me.getCar());
         nissan.sell(me, jan, 600.0);
+        //nissan.sell(me, jan, 800.0); //tested for throwing exceptions
 
         me.setPet(cat);
         jan.sell(me, someRandomGuy, 600000.0);
@@ -154,6 +155,22 @@ public class Main {
 
         phone.installAnApp("Facebook");
 
+        me.addCarToGarage(ford);
+        me.addCarToGarage(nissan);
+        me.addCarToGarage(opel);
 
+        System.out.println("unsorted garage:");
+        for (int i = 0; i < me.getGarage().length; i++) {
+            System.out.println(me.getCarFromGarage(i));
+        }
+
+        me.sortCarsInGarageByAge();
+
+        System.out.println("sorted garage by age:");
+        for (int i = 0; i < me.getGarage().length; i++) {
+            System.out.println(me.getCarFromGarage(i));
+        }
+
+        //nissan.sell(jan, me, 500.0); //checking "throw" for empty space in garage.
     }
 }
